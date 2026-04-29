@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "if": "Bash(git commit*)",
+            "command": "(cd /Users/lakshmisridevi/ProgramOS/programOS/frontend && npm run build 2>&1 && npm run lint 2>&1) && (cd /Users/lakshmisridevi/ProgramOS/programOS/backend && .venv/bin/pytest -v 2>&1) && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"allow\"}}' || echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Build, lint, or tests failed. Fix errors before committing.\"}}'",
+            "timeout": 120,
+            "statusMessage": "Running build, lint, and tests before commit..."
+          }
+        ]
+      }
+    ]
+  }
+}
