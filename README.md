@@ -9,8 +9,13 @@ Enterprise execution is fragmented across tools, spreadsheets, and manual report
 ## MVP Goal
 Build a working platform that centralizes program tracking, visibility, governance, and AI insights.
 
+## Target Users
+- Program Managers
+- TPMs
+- Delivery Leaders
+
 ## MVP Features
-- Program creation
+- Program creation - CRUD
 - Program Dashboard
 - Milestones tracking
 - Risk register
@@ -25,9 +30,15 @@ Build a working platform that centralizes program tracking, visibility, governan
 - Next.js
 - FastAPI
 - PostgreSQL
-- OpenAI API
+- Claude (Anthropic) API
 
 ## Future Roadmap
 - Distributed services
 - Agentic workflows
 - Predictive analytics
+- Multi-tenant enterprise org model
+
+## Success Criteria
+- Live deployed app
+- Clean UI
+- Real data flows
